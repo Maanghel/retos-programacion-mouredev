@@ -9,10 +9,15 @@ cada impresión), sustituyendo los siguientes:
 
 def fizz_buzz():
     """
-    Prints the numbers from 1 to 100, replacing:
-    - multiples of 3 with "fizz"
-    - multiples of 5 with "buzz"
-    - multiples of both 3 and 5 with "fizzbuzz"
+    Print numbers from 1 to 100 with the following substitutions:
+    - For multiples of 3, print "fizz"
+    - For multiples of 5, print "buzz"
+    - For multiples of both 3 and 5, print "fizzbuzz"
+
+    Each output is printed on a new line.
+
+    Returns:
+    None
     """
     for x in range(1, 101):
         if x % 3 == 0 and x % 5 == 0:

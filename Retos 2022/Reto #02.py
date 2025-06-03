@@ -8,6 +8,19 @@ Escribe una función que reciba dos palabras (String) y retorne
 """
 
 def is_anagram(word1: str, word2: str) -> bool:
+    """
+    Determine whether two words are anagrams of each other.
+
+    An anagram is a word formed by rearranging all the letters of another word.
+    This function returns False if the words are exactly the same or have different lengths.
+
+    Parameters:
+    - word1 (str): The first word to compare.
+    - word2 (str): The second word to compare.
+
+    Returns:
+    - bool: True if the words are anagrams, False otherwise.
+    """
     word1 = word1.lower()
     word2 = word2.lower()
 
