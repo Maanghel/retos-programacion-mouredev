@@ -20,20 +20,32 @@ def polygon_area(polygon: dict) -> float:
 
     Returns:
     - float: The area of the polygon.
+
+    Raises:
+    - ValueError: If required dimensions are missing or invalid.
     """
     type_ = polygon.get("type")
 
     if type_ == "triangle":
         base = polygon.get("base")
         height = polygon.get("height")
+        if base is None or height is None:
+            raise ValueError("Faltan 'base' o 'height' para calcular el área del triángulo.")
         return 0.5 * base * height
+
     elif type_ == "square":
         side = polygon.get("side")
+        if side is None:
+            raise ValueError("Falta 'side' para calcular el área del cuadrado.")
         return side ** 2
+
     elif type_ == "rectangle":
         width = polygon.get("width")
         height = polygon.get("height")
+        if width is None or height is None:
+            raise ValueError("Faltan 'width' o 'height' para calcular el área del rectángulo.")
         return width * height
+
     else:
         raise ValueError("Unsupported polygon type.")
 
