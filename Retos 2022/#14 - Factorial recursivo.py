@@ -22,6 +22,7 @@ def recursion_factorial(num: int) -> int:
         return 1
     return num * recursion_factorial(num - 1)
 
-print(recursion_factorial(6))
-print(recursion_factorial(0))
-# print(recursion_factorial(1))
+if __name__ == "__main__":
+    print(recursion_factorial(6))
+    print(recursion_factorial(0))
+    # print(recursion_factorial(1))
