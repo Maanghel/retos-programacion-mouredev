@@ -34,4 +34,6 @@ def is_palindrome(text: str) -> bool:
 
     return cleaned_text == cleaned_text[::-1]
 
-print(is_palindrome("Ana, lleva al. oso la avellana!"))
+
+if __name__ == "__main__":
+    print(is_palindrome("Ana, lleva al. oso la avellana!"))

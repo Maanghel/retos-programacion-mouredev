@@ -23,6 +23,7 @@ def is_armstrong_number(number: int) -> bool:
 
     return count == number
 
+
 if __name__ == "__main__":
     print(is_armstrong_number(153))
     print(is_armstrong_number(8))

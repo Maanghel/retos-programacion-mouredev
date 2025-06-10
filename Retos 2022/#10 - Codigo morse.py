@@ -79,9 +79,10 @@ class ConverterMorse:
             print("Ingrese un dato válido.")
 
 
-converter = ConverterMorse()
-print("Texto a morse:")
-converter.converter("Te amo")
+if __name__ == "__main__":
+    converter = ConverterMorse()
+    print("Texto a morse:")
+    converter.converter("Te amo")
 
-print("\nMorse a texto:")
-converter.converter("- .  .- -- ---")
+    print("\nMorse a texto:")
+    converter.converter("- .  .- -- ---")

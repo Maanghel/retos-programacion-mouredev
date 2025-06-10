@@ -25,4 +25,6 @@ def fibonacci(count: int = 50) -> None:
         print(num1)
         num1, num2 = num2, num1 + num2
 
-fibonacci()
+
+if __name__ == "__main__":
+    fibonacci()

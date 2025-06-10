@@ -36,10 +36,12 @@ def balanced_expression(expression: str) -> bool:
 
     return not stack
 
-print(balanced_expression("{ [ a * ( c + d ) ] - 5 }"))
-print(balanced_expression("{ a * ( c + d ) ] - 5 }"))
-print(balanced_expression("(((())))"))
-print(balanced_expression("{[(])}"))
-print(balanced_expression("({[]})"))
-print(balanced_expression("["))
-print(balanced_expression(""))
+
+if __name__ == "__main__":
+    print(balanced_expression("{ [ a * ( c + d ) ] - 5 }"))
+    print(balanced_expression("{ a * ( c + d ) ] - 5 }"))
+    print(balanced_expression("(((())))"))
+    print(balanced_expression("{[(])}"))
+    print(balanced_expression("({[]})"))
+    print(balanced_expression("["))
+    print(balanced_expression(""))

@@ -32,6 +32,8 @@ def missing_char(str1: str, str2: str) -> tuple[str, str]:
 
     return out1, out2
 
-o1, o2 = missing_char("hola python", "adios java")
-print(o1)
-print(o2)
+
+if __name__ == "__main__":
+    o1, o2 = missing_char("hola python", "adios java")
+    print(o1)
+    print(o2)

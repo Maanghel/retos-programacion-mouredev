@@ -38,6 +38,7 @@ def polygon_area(polygon: dict) -> float:
         raise ValueError("Unsupported polygon type.")
 
 
-print("Área del triángulo:", polygon_area({"type": "triangle", "base": 10, "height": 5}))
-print("Área del cuadrado:", polygon_area({"type": "square", "side": 4}))
-print("Área del rectángulo:", polygon_area({"type": "rectangle", "width": 8, "height": 3}))
+if __name__ == "__main__":
+    print("Área del triángulo:", polygon_area({"type": "triangle", "base": 10, "height": 5}))
+    print("Área del cuadrado:", polygon_area({"type": "square", "side": 4}))
+    print("Área del rectángulo:", polygon_area({"type": "rectangle", "width": 8, "height": 3}))

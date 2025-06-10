@@ -29,5 +29,6 @@ def aspect_ratio(url: str) -> str:
     return f"{width // divisor}:{height // divisor}"
 
 
-url = "https://raw.githubusercontent.com/mouredev/mouredev/master/mouredev_github_profile.png"
-print(f"El aspect ratio de la imagen es: {aspect_ratio(url)}")
+if __name__ == "__main__":
+    url = "https://raw.githubusercontent.com/mouredev/mouredev/master/mouredev_github_profile.png"
+    print(f"El aspect ratio de la imagen es: {aspect_ratio(url)}")

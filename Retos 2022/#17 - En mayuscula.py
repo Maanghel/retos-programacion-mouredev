@@ -45,6 +45,7 @@ def upper(text: str) -> str:
 
     return " ".join(new_text)
 
+
 if __name__ == "__main__":
     capitalize_text = upper("hola a todos, seguimos aprendiendo python!")
     print(capitalize_text)

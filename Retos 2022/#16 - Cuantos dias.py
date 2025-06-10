@@ -33,6 +33,7 @@ def day_difference(date1: str, date2: str) -> int:
 
     return abs((dt1 - dt2).days)
 
+
 if __name__ == "__main__":
     print(day_difference("01/06/2025", "06/06/2025"))
     print(day_difference("02/06/2025", "06/06/2025"))

@@ -22,4 +22,6 @@ def decimal_to_binarie(num: int) -> None:
     for i in range(len(binarie) - 1, -1, -1):
         print(binarie[i], end= "")
 
-decimal_to_binarie(25)
+
+if __name__ == "__main__":
+    decimal_to_binarie(25)

@@ -61,8 +61,9 @@ def word_counter(text: str) -> dict:
     return word_dict
 
 
-TEXT = "Hola Hola, Python Hola!, h2la, PyThon, hola  "
-dict_ = word_counter(TEXT)
+if __name__ == "__main__":
+    TEXT = "Hola Hola, Python Hola!, h2la, PyThon, hola  "
+    dict_ = word_counter(TEXT)
 
-for key, value in dict_.items():
-    print(f"{key}: {value}")
+    for key, value in dict_.items():
+        print(f"{key}: {value}")

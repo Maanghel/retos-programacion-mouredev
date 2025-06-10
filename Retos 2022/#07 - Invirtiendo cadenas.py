@@ -23,4 +23,6 @@ def reverse_text(text: str) -> str:
         reverse = char + reverse
     return reverse
 
-print(reverse_text("Hola mundo"))
+
+if __name__ == "__main__":
+    print(reverse_text("Hola mundo"))

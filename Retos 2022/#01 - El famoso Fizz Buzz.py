@@ -29,4 +29,6 @@ def fizz_buzz():
         else:
             print(x)
 
-fizz_buzz()
+
+if __name__ == "__main__":
+    fizz_buzz()

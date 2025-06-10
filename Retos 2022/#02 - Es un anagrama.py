@@ -29,6 +29,8 @@ def is_anagram(word1: str, word2: str) -> bool:
 
     return sorted(word1) == sorted(word2)
 
-text1 = "cara"
-text2 = "arc"
-print(is_anagram(text1, text2))
+
+if __name__ == "__main__":
+    text1 = "cara"
+    text2 = "arc"
+    print(is_anagram(text1, text2))
