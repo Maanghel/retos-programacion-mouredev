@@ -75,6 +75,6 @@ def rock_paper_scissors(game: List[Tuple[Move, Move]]) -> Result:
 
 
 if __name__ == "__main__":
-    plays = [("R", "S"), ("S", "R"), ("R", "S")]
+    plays: List[Tuple[Move, Move]] = [("R", "S"), ("S", "R"), ("R", "S")]
     result = rock_paper_scissors(plays)
     print(f"Resultado del juego: {result}")
