@@ -15,11 +15,9 @@ Simula el funcionamiento de una máquina expendedora creando una operación
 
 class ProductError(Exception):
     """Exception raised when an invalid product ID is selected."""
-    pass
 
 class MoneyError(Exception):
     """Exception raised when there is a problem with the inserted money."""
-    pass
 
 def validate_data(id_: int, money: list[int]) -> None:
     """
