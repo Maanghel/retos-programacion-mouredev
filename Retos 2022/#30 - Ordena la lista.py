@@ -56,7 +56,9 @@ def sort_list(arr: List[int], sort: SortOption = "Asc") -> list[int]:
     elif sort == "Desc":
         return sort_list(right, sort) + [pivot] + sort_list(left, sort)
 
-lista_desordenada = [5, 2, 8, 1, 9, 4, 7, 3, 6]
-lista_ordenada = sort_list(lista_desordenada, "Asc")
-print(f"Lista desordenada: {lista_desordenada}")
-print(f"Lista ordenada: {lista_ordenada}")
+
+if __name__ == "__main__":
+    lista_desordenada = [5, 2, 8, 1, 9, 4, 7, 3, 6]
+    lista_ordenada = sort_list(lista_desordenada, "Asc")
+    print(f"Lista desordenada: {lista_desordenada}")
+    print(f"Lista ordenada: {lista_ordenada}")
