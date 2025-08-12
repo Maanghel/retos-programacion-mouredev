@@ -11,7 +11,7 @@ Crea un programa que calcule quien gana más partidas al piedra,
 
 from typing import List, Tuple, Literal
 
-Move = Literal["R", "P", "S", "L", "SP"]
+Move = Literal["🗿", "📄", "✂️", "🦎", "🖖"]
 Result = Literal["Player 1", "Player 2", "Tie", "Invalid Input"]
 
 def validate_game(game: List[Tuple[Move, Move]]) -> bool:
@@ -25,7 +25,7 @@ def validate_game(game: List[Tuple[Move, Move]]) -> bool:
     Returns:
         bool: True if all moves are valid, False otherwise.
     """
-    valid_moves = {"R", "P", "S", "L", "SP"}
+    valid_moves = {"🗿", "📄", "✂️", "🦎", "🖖"}
     return all(p1 in valid_moves and p2 in valid_moves for p1, p2 in game)
 
 
@@ -43,13 +43,13 @@ def winner(p1: Move, p2: Move) -> int:
             1 -> Player 1 wins
             2 -> Player 2 wins
     """
-    win_rules = {"S": ("P", "L"),
-                "P": ("R", "SP"),
-                "R": ("S", "L"),
-                "L": ("P", "SP"),
-                "SP": ("S", "R")
-                }
-
+    win_rules = {
+            "🗿": ["✂️", "🦎"],
+            "📄": ["🗿", "🖖"],
+            "✂️": ["📄", "🦎"],
+            "🦎": ["🖖", "📄"],
+            "🖖": ["🗿", "✂️"]
+            }
     if p1 == p2:
         return 0
     elif p2 in win_rules[p1]:
@@ -93,6 +93,6 @@ def rock_paper_scissors_lizard_spock(game: List[Tuple[Move, Move]]) -> Result:
 
 
 if __name__ == "__main__":
-    plays: List[Tuple[Move, Move]] = [("R", "S"), ("S", "R"), ("R", "S")]
+    plays: List[Tuple[Move, Move]] = [("🗿","✂️"), ("✂️","🗿"), ("📄","✂️")]
     result = rock_paper_scissors_lizard_spock(plays)
     print(f"Resultado del juego: {result}")
