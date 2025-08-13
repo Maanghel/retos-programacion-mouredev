@@ -45,6 +45,7 @@ def ask_questions(questions: Dict[str, list[str | list[str]]]) -> dict[int, int]
         dict: A dictionary with the count of answers for each house option.
     """
     scores = {1: 0, 2: 0, 3: 0, 4: 0}
+    input("Presionar una tecla para continuar...")
 
     for number, (question_text, options) in questions.items():
         print(f"\nPregunta {number}: {question_text}")
@@ -75,7 +76,7 @@ def determine_house(scores: Dict[int, int], houses: List[str]) -> str:
     Returns:
         str: The message revealing the assigned house.
     """
-    max_selection = max(scores, key=scores.get)
+    max_selection = max(scores, key=lambda k: scores[k])
 
     match max_selection:
         case 1:
