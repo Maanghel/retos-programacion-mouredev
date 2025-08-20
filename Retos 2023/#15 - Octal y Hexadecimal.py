@@ -83,4 +83,3 @@ if __name__ == "__main__":
     print(to_octal_and_hex(1))
     print(to_octal_and_hex(255))
     print(to_octal_and_hex(-1))
-    
