@@ -12,8 +12,46 @@ Ejemplos:
 "5 a 6" -> false
 """
 
+def is_number(number: str) -> bool:
+    """
+    Verifica si la cadena es un numero.
+
+    Args:
+        number (str): Cadena que se validara como numero.
+
+    Returns:
+        bool: True si es un numero, False en caso contrario.
+    """
+    if number.count("+") + number.count("-") > 1:
+        return False
+    if number.startswith(("+", "-")):
+        number = number[1:]
+    if number.count(".") > 1:
+        return False
+    return number.replace(".", "").isdigit()
 
 def is_mathematical_expression(expression: str) -> bool:
+    """
+    Verifica si una cadena representa una expresión matemática válida.
+
+    Para que la expresión se considere correcta debe cumplir:
+        - Estar compuesta por números y operadores separados por espacios.
+        - Alternar correctamente entre número y operador.
+        - Permitir números enteros, decimales, positivos y negativos.
+        - Permitir los operadores: +, -, *, /, %
+        - Tener al menos un patrón número-operador-número.
+        - No terminar con un operador.
+
+    Args:
+        expression (str): Cadena que representa la expresión matemática a validar.
+
+    Returns:
+        bool: True si la expresión es válida, False en caso contrario.
+
+    Raises:
+        TypeError: Si el argumento proporcionado no es una cadena.
+        ValueError: Si la cadena proporcionada está vacía o solo contiene espacios.
+    """
     if not isinstance(expression, str):
         raise TypeError("Error. Solo se aceptan cadenas de texto como valor.")
     if not expression:
@@ -23,15 +61,6 @@ def is_mathematical_expression(expression: str) -> bool:
 
     if len(data) < 3 or len(data) % 2 == 0:
         return False
-
-    def is_number(number: str) -> bool:
-        if number.count("+") + number.count("-") > 1:
-            return False
-        if number.startswith(("+", "-")):
-            number = number[1:]
-        if number.count(".") > 1:
-            return False
-        return number.replace(".", "").isdigit()
 
     expecting_number = True
     for value in data:
