@@ -52,4 +52,9 @@ def column_number(row: str) -> int:
 
 
 if __name__ == "__main__":
-    print(column_number("AAA"))
+    print(column_number("A"))
+    print(column_number("Z"))
+    print(column_number("AA"))
+    print(column_number("CA"))
+    print(column_number("XFD"))
+    print(column_number("ZZZZ"))
