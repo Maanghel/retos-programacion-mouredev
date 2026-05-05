@@ -19,7 +19,8 @@ def find_combinations(nums: list[int], target: int) -> list:
         target (int): The target sum value.
 
     Returns:
-        list: A list of lists, where each inner list is a unique combination of numbers that sum up to the target value.
+        list: A list of lists, where each inner list is a unique combination of numbers that 
+            sum up to the target value.
     """
 
     if not nums:
@@ -33,20 +34,28 @@ def find_combinations(nums: list[int], target: int) -> list:
         if remaining == 0:
             result.append(path)
             return
-        for i in range(start, len(nums)):
-            if nums[i] > remaining:
+
+        for i in range(start, len(sorted_nums)):
+
+            if i > start and sorted_nums[i] == sorted_nums[i - 1]:
                 continue
-            backtrack(i + 1, path + [nums[i]], remaining - nums[i])
+
+            if sorted_nums[i] > remaining:
+                break
+
+            backtrack(i + 1, path + [sorted_nums[i]], remaining - sorted_nums[i])
 
     result = []
-    nums.sort()
+    sorted_nums = sorted(nums)
     backtrack(0, [], target)
+    
     return result
 
 if __name__ == "__main__":
     try:
-        print(find_combinations([1, 5, 3, 2], 6))
-        print(find_combinations([2, 4, 6], 5))
+        print("Caso 1:", find_combinations([1, 5, 3, 2], 6))
+        print("Caso 2:", find_combinations([2, 4, 6], 5))
+        print("Caso 3 (Repetidos):", find_combinations([1, 1, 2, 4, 5], 5)) 
+
     except ValueError as e:
         print(e)
-
